@@ -1,0 +1,50 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="hotels">
+    <groups>
+    </groups>
+    <test name="model.TestUser_validates">
+      <class name="model.TestUser_validates">
+        <test-method status="FAIL" signature="testcheckAuthentication()" name="testcheckAuthentication" duration-ms="170" started-at="2010-12-08T17:07:32Z" finished-at="2010-12-08T17:07:32Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<false> but was:<true>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<false> but was:<true>
+	at org.testng.Assert.fail(Assert.java:86)
+	at org.testng.Assert.failNotEquals(Assert.java:440)
+	at org.testng.Assert.assertEquals(Assert.java:110)
+	at org.testng.Assert.assertEquals(Assert.java:120)
+	at model.TestUser_validates.testcheckAuthentication(TestUser_validates.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:607)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:517)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:956)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:759)
+	at org.testng.TestRunner.privateRun(TestRunner.java:592)
+	at org.testng.TestRunner.run(TestRunner.java:486)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:204)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:877)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:842)
+	at org.testng.TestNG.run(TestNG.java:751)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:73)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:124)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

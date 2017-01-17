@@ -1,0 +1,158 @@
+<html>
+<head>
+   
+   <meta http-equiv="Content-Type" content="text/html;">
+   <script language="javaScript" type="text/javascript" src="calendar.js">
+  
+   
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+</script>
+   
+
+<link href="calendar.css" rel="stylesheet" type="text/css">
+</head>
+<body id="main">
+<img id="im" src="images/Royal_Castle_29267.gif" />
+
+<div id="two">
+ <form name="form" onsubmit='return checkform(this)' action="AvailabilityServlet" method="post">
+
+      
+          
+      CHECK IN  <input type="text" name="datum1" onkeypress="return numbersOnly(this,event)"><a href="#" onClick="setYears(2009, 2015);
+       showCalender(this, 'datum1');">
+      <img src="D:\workspace1\hotels\WebContent\images\calender.PNG"></a>
+<br>
+<br>
+<br>
+      CHECK OUT  <input type="text" name="datum2" onkeypress="return numbersOnly(this,event)"><a href="#" onClick="setYears(2009, 2015);
+       showCalender(this, 'datum2');">
+      <img src="D:\workspace1\hotels\WebContent\images\calender.PNG"></a>
+<br>
+<br>
+<br>
+
+	  <select name="types">
+    <option value="1">economy</option>
+    <option value="2">deluxe</option>
+    <option value="3">club</option>
+    <option value="4">suite</option>
+    </select>
+
+    
+	  
+<input name="submit" value="submit" type="submit">
+
+
+
+    </form>
+</div>
+
+
+
+
+<div id="wrap">
+      <ul id="navbar">
+
+         <li><a href="index.html">HOME</a>
+            <ul>
+               
+                
+            </ul>
+         </li>
+
+<li><a href="#">Booking</a>
+            <ul>
+             <li><a href="calendar.html">Book</a></li>
+               <li><a href="cancel.html">Cancel</a></li>
+              	<li><a href="userhistory.jsp">History</a></li>
+            </ul>         
+         </li>
+
+
+         <li><a href="tarrif.html">Tarrif</a>
+            <ul>
+               <li><a href="tarrif.html#economy">Economy</a></li>
+               <li><a href="tarrif.html#deluxe">Deluxe</a></li>
+               <li><a href="tarrif.html#club">Club</a></li>
+	       <li><a href="tarrif.html#suite">Suite</a></li>
+            </ul>         
+         </li>
+         
+           <li><a href="gallery.html">Gallery</a>
+                  
+         </li>
+
+
+          <li><a href="contact_us.html">Contact</a>
+            <ul>
+               <li><a href="contact_us.html#address">Address</a></li>
+               <li><a href="contact_us.html#email">E-mail</a></li>
+	       	   <li><a href="contact_us.html#phone">Phone</a></li>
+            </ul>         
+         </li>
+
+         <li><a href="feedback.html">Feedback</a>
+                   
+         </li>
+      </ul>
+      </div>
+
+
+
+   
+	
+
+
+
+      
+          
+      
+   
+
+
+    <!-- Calender Script  --> 
+
+    <table id="calenderTable">
+        <tbody id="calenderTableHead">
+          <tr>
+            <td colspan="4" align="center">
+	          <select onChange="showCalenderBody(createCalender(document.getElementById('selectYear').value,
+	           this.selectedIndex, false));" id="selectMonth">
+	              <option value="0">Jan</option>
+	              <option value="1">Feb</option>
+	              <option value="2">Mar</option>
+	              <option value="3">Apr</option>
+	              <option value="4">May</option>
+	              <option value="5">Jun</option>
+	              <option value="6">Jul</option>
+	              <option value="7">Aug</option>
+	              <option value="8">Sep</option>
+	              <option value="9">Oct</option>
+	              <option value="10">Nov</option>
+	              <option value="11">Dec</option>
+	          </select>
+            </td>
+            <td colspan="2" align="center">
+			    <select onChange="showCalenderBody(createCalender(this.value, 
+				document.getElementById('selectMonth').selectedIndex, false));" id="selectYear">
+				</select>
+			</td>
+            <td align="center">
+			    <a href="#" onClick="closeCalender();"><font color="#003333" size="+1">X</font></a>
+			</td>
+		  </tr>
+       </tbody>
+       <tbody id="calenderTableDays">
+         <tr style="">
+           <td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td>
+         </tr>
+       </tbody>
+       <tbody id="calender"></tbody>
+    </table>
+
+
+<!-- End Calender Script  --> 
+
+  </body>
+</html>

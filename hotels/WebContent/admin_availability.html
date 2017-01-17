@@ -1,0 +1,124 @@
+<html>
+<head>
+   
+   <meta http-equiv="Content-Type" content="text/html;">
+   <script language="javaScript" type="text/javascript" src="calendar.js">
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+</script>
+   
+
+<link href="calendar.css" rel="stylesheet" type="text/css">
+</head>
+<body id="main">
+<img id="im" src="images/Royal_Castle_29267.gif" />
+
+
+
+<div id="two">
+ <form action="admindateavailability.jsp" method="post">
+
+      
+          
+      SELECT DATE  <input type="text" name="datum1"><a href="#" onClick="setYears(2009, 2015);
+       showCalender(this, 'datum1');">
+      <img src="images/calender.png"></a>
+
+      
+<input name="submit" value="submit" type="submit">
+
+
+    </form>
+    
+    <br>
+<br>
+<br>
+Click to view all availability
+<br> 
+<form action="adminavailability.jsp" method="post">
+<input name="submit" value="allavailable" type="submit">
+</form>
+
+
+<a href="logoutServlet"> logout</a>
+</div>
+
+<div id="wrap">
+      <ul id="navbar">
+
+         <li><a href="admin_availability.html">AVAILABILITY</a>
+              
+         </li>
+         
+		<li><a href="adminbooked.jsp">BOOKED</a>
+                 
+        </li>
+
+
+         <li><a href="admincancelled.jsp">CANCELLED</a>
+                 
+         </li>
+
+         <li><a href="adminfeedback.jsp">FEEDBACK</a>
+                    
+         </li>
+      </ul>
+      </div>
+
+
+
+   
+	
+
+
+
+      
+          
+      
+   
+
+
+    <!-- Calender Script  --> 
+
+    <table id="calenderTable">
+        <tbody id="calenderTableHead">
+          <tr>
+            <td colspan="4" align="center">
+	          <select onChange="showCalenderBody(createCalender(document.getElementById('selectYear').value,
+	           this.selectedIndex, false));" id="selectMonth">
+	              <option value="0">Jan</option>
+	              <option value="1">Feb</option>
+	              <option value="2">Mar</option>
+	              <option value="3">Apr</option>
+	              <option value="4">May</option>
+	              <option value="5">Jun</option>
+	              <option value="6">Jul</option>
+	              <option value="7">Aug</option>
+	              <option value="8">Sep</option>
+	              <option value="9">Oct</option>
+	              <option value="10">Nov</option>
+	              <option value="11">Dec</option>
+	          </select>
+            </td>
+            <td colspan="2" align="center">
+			    <select onChange="showCalenderBody(createCalender(this.value, 
+				document.getElementById('selectMonth').selectedIndex, false));" id="selectYear">
+				</select>
+			</td>
+            <td align="center">
+			    <a href="#" onClick="closeCalender();"><font color="#003333" size="+1">X</font></a>
+			</td>
+		  </tr>
+       </tbody>
+       <tbody id="calenderTableDays">
+         <tr style="">
+           <td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td>
+         </tr>
+       </tbody>
+       <tbody id="calender"></tbody>
+    </table>
+
+
+<!-- End Calender Script  --> 
+
+  </body>
+</html>

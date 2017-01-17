@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="model.TestUser_validates" failures="1" tests="1" time="0.202" errors="0">
+  <properties/>
+  <testcase name="testcheckAuthentication" time="0.17" classname="model.TestUser_validates">
+    <failure type="java.lang.AssertionError" message="expected:&lt;false&gt; but was:&lt;true&gt;">
+      <![CDATA[java.lang.AssertionError: expected:<false> but was:<true>
+	at model.TestUser_validates.testcheckAuthentication(TestUser_validates.java:46)
+... Removed 26 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>

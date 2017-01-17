@@ -1,0 +1,124 @@
+<html>
+<head>
+   
+   <meta http-equiv="Content-Type" content="text/html;">
+
+
+
+   <script language="javaScript">
+
+			function charOnly(myfield, e) 
+			{
+				 var key;
+				 var keychar;
+				 if (window.event)
+					key = window.event.keyCode;
+				 else if (e)
+					key = e.which;
+				 else
+					return true;
+				 keychar = String.fromCharCode(key);
+				 if ((key==null) || (key==0) || (key==8) || (key==9) || (key==13) || (key==27) )
+					return true;
+				 else if ((("abcdefghijklmnopqrstuvwxyz. ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(keychar) > -1))
+					return true;
+				 else
+					return false;
+			}
+
+			
+			
+			function checkemail(email)
+			{
+				var reg = /^([A-Za-z0-9_\-\.])+[\@]([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+				if(reg.test(email.value) == false) {
+					alert('Invalid Email Address');
+					email.value="";
+					
+				}
+			}
+
+
+	
+			
+function chk1(e){
+
+var s = "hel";
+var s1 = e.value;
+				if(s1<s)
+					alert("Minimum length should be 3");
+
+			}
+
+
+
+
+function checkform ( form )
+{
+if (form.mem_name.value == "") 
+{
+alert( "Please enter your Name." );
+form.signup_name.focus();
+return false ;
+}
+else if (form.mem_mailid.value == "") 
+{
+alert( "Please enter your email address." );
+form.signup_mailid.focus();
+return false ;
+}
+if (form.rel_name.value == "") 
+{
+alert( "Please enter your Name." );
+form.signup_name.focus();
+return false ;
+}
+
+else
+return true ;
+}
+
+
+</script>
+
+
+<link href="calendar.css" rel="stylesheet" type="text/css">
+</head>
+<body id="main">
+<img id="im" src="" />
+
+
+<div id="two">
+	
+	
+	
+
+<form name="f1" onsubmit='return checkform(this)' method="POST" action="AddServlet">
+	<br><br>
+
+	Name <br><input type="text" name="mem_name"  maxlength="10"  onkeypress="return charOnly(this,event)" onblur="chk1(this)" />
+	<br><br>
+	Mail_Id <br><input type="text" name="mem_mailid" onblur='checkemail(this)'  />
+	<br><br>
+	Relationship<br><input type="text" name="rel_name"  maxlength="10"  onkeypress="return charOnly(this,event)" onblur="chk1(this)" />
+	<br><br>
+	
+	<input name="submit" value="submit" type="submit" />
+	
+</form>
+
+          
+</div> 
+
+
+
+<div id="wrap">
+      
+      </div>
+
+
+
+   
+
+  </body>
+</html>

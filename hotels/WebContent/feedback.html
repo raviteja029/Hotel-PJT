@@ -1,0 +1,166 @@
+<html>
+<head>
+   
+   <meta http-equiv="Content-Type" content="text/html;">
+   <script language="javaScript">
+
+
+	function charOnly(myfield, e) 
+			{
+				 var key;
+				 var keychar;
+				 if (window.event)
+					key = window.event.keyCode;
+				 else if (e)
+					key = e.which;
+				 else
+					return true;
+				 keychar = String.fromCharCode(key);
+				 if ((key==null) || (key==0) || (key==8) || (key==9) || (key==13) || (key==27) )
+					return true;
+				 else if ((("abcdefghijklmnopqrstuvwxyz. ABCDEFGHIJKLMNOPQRSTUVWXYZ").indexOf(keychar) > -1))
+					return true;
+				 else
+					return false;
+			}
+
+			function numbersOnly(myfield, e, dec) 
+			{
+				 var key;
+				 var keychar;
+				 if (window.event)
+					key = window.event.keyCode;
+				 else if (e)
+					key = e.which;
+				 else
+					return true;
+				 keychar = String.fromCharCode(key);
+				 if ((key==null) || (key==0) || (key==8) || (key==9) || (key==13) || (key==27) )
+					return true;
+				 else if ((("0123456789").indexOf(keychar) > -1))
+					return true;
+				 else
+					return false;
+			}
+			
+			
+
+
+
+
+
+
+
+
+			function chk(e){
+				if(e.value<9000000000)
+					alert("Enter a valid mobile number");
+			}
+			
+function chk1(e){
+
+var s = "hell";
+var s1 = e.value;
+				if(s1<s)
+					alert("Minimum length should be 4");
+
+			}
+
+
+
+
+function checkform ( form )
+{
+if (form.feedbackUsername.value == "") 
+{
+alert( "Please enter your Name." );
+form.feedbackUsername.focus();
+return false ;
+}
+else if (form.feedbackContact.value == "") 
+{
+alert( "Please enter your phone." );
+form.feedbackContact.focus();
+return false ;
+}
+else
+return true ;
+}
+
+
+
+
+
+</script>
+   
+
+<link href="calendar.css" rel="stylesheet" type="text/css">
+</head>
+<body id="main">
+<img id="im" src="images/Royal_Castle_29267.gif" />
+
+
+<div id="two">
+	
+	<h3>FEEDBACK</h3>
+	<form action="FeedbackServlet" method="post">
+	<br>
+	Username <br><input type="text" name="feedbackUsername" maxlength="10"  onkeypress="return charOnly(this,event)" onblur="chk1(this)" />
+	<br><br><br>
+	Contact Number <br><input type="text" name="feedbackContact" onkeypress="return numbersOnly(this,event)" maxlength="10" onblur="chk(this)" />
+	<br><br><br>
+	Feedback <br><textarea name="feedbackContent" rows=10 cols=40>
+	</textarea>
+	<br><br><br>
+	<input name="submit" value="submit" type="submit">
+</form>
+</div>
+
+
+<div id="wrap">
+      <ul id="navbar">
+
+         <li><a href="index.html">HOME</a>
+            
+         </li>
+
+<li><a href="#">Booking</a>
+            <ul>
+               <li><a href="calendar.html">Book</a></li>
+               <li><a href="cancel.html">Cancel</a></li>
+               <li><a href="userhistory.jsp">History</a></li>
+            </ul>         
+         </li>
+
+
+         <li><a href="tarrif.html">Tarrif</a>
+            <ul>
+               <li><a href="tarrif.html#economy">Economy</a></li>
+               <li><a href="tarrif.html#deluxe">Deluxe</a></li>
+               <li><a href="tarrif.html#club">Club</a></li>
+	       <li><a href="tarrif.html#suite">Suite</a></li>
+            </ul>          
+         </li>
+         
+           <li><a href="gallery.html">Gallery</a>
+                    
+         </li>
+
+
+          <li><a href="contact_us.html">Contact</a>
+            <ul>
+               <li><a href="contact_us.html#address">Address</a></li>
+               <li><a href="contact_us.html#email">E-mail</a></li>
+	       <li><a href="contact_us.html#phone">Phone</a></li>
+            </ul>         
+         </li>
+
+         <li><a href="feedback.html">Feedback</a>
+                     
+         </li>
+      </ul>
+      </div>
+
+
+  </body>
+</html>
